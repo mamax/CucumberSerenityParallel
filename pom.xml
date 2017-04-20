@@ -13,6 +13,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <serenity.version>1.2.2-rc.1</serenity.version>
         <serenity.cucumber.version>1.1.16</serenity.cucumber.version>
+        <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+        <java.version>1.8</java.version>
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
 
@@ -76,14 +78,14 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.18.1</version>
+                <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <skip>true</skip>
                 </configuration>
             </plugin>
             <plugin>
                 <artifactId>maven-failsafe-plugin</artifactId>
-                <version>2.18.1</version>
+                <version>${maven-surefire-plugin.version}</version>
                 <configuration>
                     <includes>
                         <include>**/*.java</include>
@@ -107,8 +109,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                 </configuration>
             </plugin>
             <plugin>
