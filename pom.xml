@@ -14,7 +14,7 @@
         <serenity.cucumber.version>1.1.16</serenity.cucumber.version>
         <cucumber.jvm.parallel.version>2.2.0</cucumber.jvm.parallel.version>
         <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
-        <acceptance.test.parallel.count>4</acceptance.test.parallel.count>
+        <!--<acceptance.test.parallel.count>4</acceptance.test.parallel.count>-->
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
 
@@ -87,7 +87,7 @@
                             <goal>test</goal>
                         </goals>
                         <configuration>
-                            <forkCount>${acceptance.test.parallel.count}</forkCount>
+                            <forkCount>${thread}</forkCount>
                             <reuseForks>true</reuseForks>
                             <includes>
                                 <include>**/*IT.class</include>
