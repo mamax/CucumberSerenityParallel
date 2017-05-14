@@ -1,7 +1,9 @@
+@vegetables
 Feature:
   In order to talk better
   As an English student
   I want to look up word definitions
+
   @smoke
 Scenario: Looking up the definition of 'beet'
   Given the user is on the Wikionary home page
