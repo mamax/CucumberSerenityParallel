@@ -7,19 +7,24 @@
     <packaging>pom</packaging>
     <version>1.0</version>
 
-    <name>Parallel automation tests Cucumber and WebDriver</name>
+    <name>Sample Serenity project using Cucumber and WebDriver</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <serenity.cucumber.version>1.1.34</serenity.cucumber.version>
+        <serenity.version>1.2.2-rc.1</serenity.version>
+        <serenity.cucumber.version>1.1.16</serenity.cucumber.version>
         <cucumber.jvm.parallel.version>3.0.0</cucumber.jvm.parallel.version>
         <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
-        <java.version>1.8</java.version>
-        <maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+        <!--<acceptance.test.parallel.count>4</acceptance.test.parallel.count>-->
         <webdriver.driver>firefox</webdriver.driver>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>net.serenity-bdd</groupId>
+            <artifactId>serenity-core</artifactId>
+            <version>${serenity.version}</version>
+        </dependency>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
             <artifactId>serenity-cucumber</artifactId>
@@ -41,6 +46,11 @@
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>1.7.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.googlecode.lambdaj</groupId>
+            <artifactId>lambdaj</artifactId>
+            <version>2.3.3</version>
         </dependency>
     </dependencies>
     <build>
@@ -109,10 +119,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>${maven-compiler-plugin.version}</version>
+                <version>3.2</version>
                 <configuration>
-                    <source>${java.version}</source>
-                    <target>${java.version}</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
 
