@@ -4,7 +4,7 @@ Feature: Lookup a definition
   As an English student
   I want to look up word definitions
 
-  @smoke @regression
+  @smoke
   Scenario: Looking up the definition of 'orange'
     Given the user is on the Wikionary home page
     When the user looks up the definition of the word 'orange'

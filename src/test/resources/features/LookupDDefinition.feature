@@ -1,16 +1,15 @@
-@vegetables
 Feature: Lookup a definition
   In order to talk better
   As an English student
   I want to look up word definitions
 
-  @smoke
+  @smoke @vegetables
   Scenario: Looking up the definition of 'cucumber'
     Given the user is on the Wikionary home page
     When the user looks up the definition of the word 'cucumber'
     Then they should see the definition 'A vine in the gourd family, Cucumis sativus.'
 
-  @regression
+  @regression @fruit
   Scenario: Looking up the definition of 'plum'
     Given the user is on the Wikionary home page
     When the user looks up the definition of the word 'plum'
