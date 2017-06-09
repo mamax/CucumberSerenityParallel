@@ -4,8 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.cucumber.serenity</groupId>
     <artifactId>test-automation</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <version>1.0</version>
 
     <name>Sample Serenity project using Cucumber and WebDriver</name>
 
@@ -20,27 +19,6 @@
         <chromedriver.version>2.29</chromedriver.version>
     </properties>
 
-    <repositories>
-      <repository>
-        <snapshots>
-        <enabled>false</enabled>
-        </snapshots>
-        <id>central</id>
-        <name>bintray</name>
-        <url>http://jcenter.bintray.com</url>
-      </repository>
-    </repositories>
-    <pluginRepositories>
-      <pluginRepository>
-        <snapshots>
-        <enabled>false</enabled>
-        </snapshots>
-        <id>central</id>
-        <name>bintray-plugins</name>
-        <url>http://jcenter.bintray.com</url>
-      </pluginRepository>
-    </pluginRepositories>
-
     <dependencies>
         <dependency>
             <groupId>net.serenity-bdd</groupId>
@@ -54,25 +32,14 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.7.7</version>
-        </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-            <scope>test</scope>
-        </dependency>
-        <dependency>
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>1.7.0</version>
         </dependency>
         <dependency>
-            <groupId>com.github.webdriverextensions</groupId>
-            <artifactId>webdriverextensions</artifactId>
-            <version>3.5.1</version>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
         </dependency>
     </dependencies>
     <build>
