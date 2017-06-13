@@ -4,3 +4,4 @@
 .sonar
 target/*
 /drivers
+/src/test/resources/reportportal.properties
