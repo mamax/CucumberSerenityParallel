@@ -6,6 +6,9 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 import com.cucumber.serenity.steps.serenity.EndUserSteps;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 
 public class DefinitionSteps {
 
