@@ -2,13 +2,15 @@ package com.cucumber.serenity.steps.serenity;
 
 import com.cucumber.serenity.pages.DictionaryPage;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.steps.ScenarioSteps;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasItem;
 
 public class EndUserSteps {
+    private static Logger logger = LoggerFactory.getLogger(EndUserSteps.class);
 
     DictionaryPage dictionaryPage;
 
@@ -29,6 +31,7 @@ public class EndUserSteps {
 
     @Step
     public void is_the_home_page() {
+        logger.info("HI!!!!!!!!!!!!!!!!!!");
         dictionaryPage.open();
     }
 
