@@ -15,7 +15,7 @@
         </layout>
     </appender>
 
-    <logger name="com.mkyong.web" level="debug"
+    <logger name="com.cucumber.serenity" level="debug"
             additivity="false">
         <appender-ref ref="STDOUT" />
     </logger>
