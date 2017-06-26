@@ -1,18 +1,18 @@
 package com.cucumber.serenity.steps;
 
-import net.thucydides.core.annotations.Steps;
+import com.cucumber.serenity.steps.serenity.EndUserSteps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import net.thucydides.core.annotations.Steps;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 
-import com.cucumber.serenity.steps.serenity.EndUserSteps;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-
+@ContextConfiguration("classpath:cucumber.xml")
 public class DefinitionSteps {
 
     @Steps
+    @Autowired
     EndUserSteps anna;
 
     @Given("the user is on the Wikionary home page")

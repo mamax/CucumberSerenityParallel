@@ -9,12 +9,14 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.core.annotations.findby.FindBy;
 
 import net.thucydides.core.pages.PageObject;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
 import static ch.lambdaj.Lambda.convert;
 
 @DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary")
+@Component
 public class DictionaryPage extends PageObject {
 
     @FindBy(name="search")

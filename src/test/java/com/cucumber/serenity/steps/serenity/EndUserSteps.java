@@ -4,14 +4,18 @@ import com.cucumber.serenity.pages.DictionaryPage;
 import net.thucydides.core.annotations.Step;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.hasItem;
 
+@ContextConfiguration("classpath:cucumber.xml")
 public class EndUserSteps {
     private static Logger logger = LoggerFactory.getLogger(EndUserSteps.class);
 
+    @Autowired
     DictionaryPage dictionaryPage;
 
     @Step
