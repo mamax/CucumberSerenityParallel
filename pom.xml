@@ -16,7 +16,7 @@
         <maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
         <java.version>1.8</java.version>
         <webdriver.driver>chrome</webdriver.driver>
-        <chromedriver.version>2.31</chromedriver.version>
+        <chromedriver.version>2.33</chromedriver.version>
     </properties>
 
     <dependencies>
@@ -82,6 +82,12 @@
                         <driver>
                             <name>chromedriver</name>
                             <platform>linux</platform>
+                            <bit>64</bit>
+                            <version>${chromedriver.version}</version>
+                        </driver>
+                        <driver>
+                            <name>chromedriver</name>
+                            <platform>mac</platform>
                             <bit>64</bit>
                             <version>${chromedriver.version}</version>
                         </driver>
